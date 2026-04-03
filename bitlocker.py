@@ -204,7 +204,6 @@ class BitlockerFVEKScan(interfaces.plugins.PluginInterface):
         # Iterate pool headers that match our tags
         for constraint, pool in ps.PoolScanner.pool_scan(
             context=self.context,
-            kernel_module_name=self.config["kernel"],
             layer_name=kernel.layer_name,
             symbol_table=kernel.symbol_table_name,
             pool_constraints=constraints,
